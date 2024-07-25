@@ -30,7 +30,7 @@ logger.add(sys.stderr, level="DEBUG")
 async def main(room_url):  
   async with aiohttp.ClientSession() as session:
     transport = DailyTransport(
-      room_url, None, "Robot Gay", DailyParams(audio_out_enabled=True))
+      room_url, None, "Python Bot", DailyParams(audio_out_enabled=True))
 
     tts = ElevenLabsTTSService(
       aiohttp_session=session,
